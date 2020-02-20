@@ -1,32 +1,32 @@
-### Perdicting Intent for an Online Retailer
+## Perdicting Intent for an Online Retailer
 
 Trained and evaluated several models to predict user purchasing intent for an online retailer, seeking to improve UX and increase conversion by offering customized content based on visit intent. 
-Team Project Final Report
-Course dec520Q, Section 10A, Team A15
-Team Members: Yehudi Baptiste, Hirak Bhayani, Rata Kiewkarnkha, Xinyue Li, Zhipeng Wang 
 
-The Business Understanding 
-	According to the Commerce Department, the percentage of retail sales done online surpassed general merchandise sales (i.e. sales at department stores, warehouse clubs and super-center) for the first time ever this year. This major milestone for ecommerce highlights the importance that online sales has come to hold for merchandisers and retailers. Retailers can no longer deny the benefits of offering their products online.
-But with an online presence comes the need to manage that presence in a way that maximizes conversion i.e. the probability that a visitor will make a purchase. According to Okan Sakar et al, “the fact that … conversion rates have not increased at the same rate of [usage] leads to the need for solutions that present [customization] to online shoppers.” Customization requires an understanding of when a visitor is likely to make a purchase, or simply abandon the site empty handed without making any purchases. Visitors who are more likely to abandon can be shown a different version of the site, offered special promotions, or shown different products, to encourage conversion. 
+Final Report
+
+### The Business Understanding 
+	
+According to the Commerce Department, the percentage of retail sales done online surpassed general merchandise sales (i.e. sales at department stores, warehouse clubs and super-center) for the first time this year. This major milestone for ecommerce highlights the importance that online sales has come to hold for merchandisers and retailers. Retailers can no longer deny the benefits of offering their products online.
+But with an online presence comes the need to manage that presence in a way that maximizes conversion i.e. the probability that a visitor will make a purchase. According to Okan Sakar et al, “the fact that … conversion rates have not increased at the same rate of [usage] leads to the need for solutions that present [customization] to online shoppers.” Customization requires an understanding of when a visitor is likely to make a purchase, or simply abandon the site empty handed without making any purchases. Visitors who are more likely to abandon can be shown a different version of the site, offered special promotions, or shown different products, for example, to encourage conversion. 
 Oskar et al. contrast the tools that retailers have online vs offline to motivate conversion. “In physical retailing,” according to them, “a salesperson can offer a range of customized alternatives to shoppers based on the experience he or she has gained over time.” Bringing such agency online should be a key goal of retailers. We hope to help retailers achieve this goal. 
 Using session data from an online retailer, we seek to construct a model that will predict the likelihood that a visitor will make a purchase in real time. This prediction will be used to inform customization so that those customers with purchase intent are pushed to convert. 
- In this supervised binary classification problem, we construct and assess different models (e.g. logistic, Lasso, random forest) to see which model has the most predictive power. This project is relevant to the online retail space. We envision that our model can be used in real time to make predictions that will allow retailers to maximize the likelihood that visitors make a purchase. Since a small increase in sales conversion can pay huge dividends, this project will help retailers understand how to maximize their revenues. 
+In this supervised binary classification problem, we construct and assess different models (e.g. logistic, Lasso, random forest) to see which model has the most predictive power. This project is relevant to the online retail space. We envision that our model can be used in real time to make predictions that will allow retailers to maximize the likelihood that visitors make a purchase. Since a small increase in sales conversion can pay huge dividends, this project will help retailers understand how to maximize their revenues. 
 
-The Data Understanding  
-	To build our supervised models, we will use session data donated from an online retailer. The data contain session information, click flow data, and purchases for visitors who navigated to the retailer’s website over the course of a year. One record reflects one session, in which a user visited the website, perform certain actions, and either purchased a product or not. The dataset consists of 10 numerical variables (e.g average time spent on different pages) along with 8 categorical variables (browser, region etc.). 
+### The Data Understanding  
+To build our supervised models, we will use session data donated from an online retailer. The data contain session information, click flow data, and purchases for visitors who navigated to the retailer’s website over the course of a year. One record reflects one session, in which a user visited the website, performed certain actions, and either purchased a product or not. The dataset consists of 10 numerical variables (e.g average time spent on different pages) along with 8 categorical variables (browser, region etc.). 
 Our variable of interest (i.e. outcome or target variable) is the attribute “Revenue,” which is a binary variable that records if a visitor made a purchase or not. Of the 12,330 sessions in the dataset, 84.5% are false cases in which a visitor did not make a purchase, and the rest are true cases that reflect a purchase. The dataset was obtained from the University of California, Irvine machine learning repository. 
 
-Data Preparation  
+### Data Preparation  
 In preprocessing our data, we change some variables into the appropriate format. For example, we change the variable “Revenue” (our outcome variable) into a binary variable from a logical. We also changed the levels of our categorical variables by labeling them with the correct names (e.g. changing Browser 1 to Browser Chrome). Our original dataset includes all complete cases, so there was no need to drop cases.  
 
-C.1 Exploratory Data Analysis 
+### C.1 Exploratory Data Analysis 
 Before constructing our models, we explore our data using visualizations. 
 
 The box plot above shows the average time spent on product-related pages split by those who made a purchase vs not. Unsurprisingly, we observe that the shoppers who purchased stayed longer on product related pages than those who did not make a purchase. 
 
 Next, we look at purchase penetration for new visitors vs. returning visitors. The plot above demonstrates that the majority of the visitors coming to the website are returning visitors. Surprisingly, we observe that the rate of purchase is higher for new visitors. 
 
-C.2 Clustering
+### C.2 Clustering
 We conduct a k-Means clustering based on six variables including "Administrative", "Administrative_Duration",  "Informational", "Informational_Duration", "ProductRelated", and "ProductRelated_Duration". The Administrative, Informational, and ProductRelated are number of web pages that visitors visit in each category; while, the duration ones are amount of time visitors spend across that type of web pages. HDIC recommends nine clusters; however, we consider that nine is too high to interpret meaningfully. We follow the advice of industry experts such as Pranava Goundan of ZS Associates and settle on five clusters. 
 
 
@@ -52,7 +52,7 @@ Size of Cluster
 
 From Table 1, we see that the biggest cluster is cluster 5 with the size of 8577 and mean revenue of about 0.12. This is the group that is the most unlikely to purchase. According to the centers of the clusters (Table 2) in the appendix, cluster 5 has the lowest duration spending on the web pages and they also visit the fewest number of web pages as compared to other clusters. Another interesting cluster is cluster 2 which has the highest chance of buying of about 0.35. According to Table 2, cluster 2 has the highest values for ProductRelated and ProductRelated_Duration, suggesting that product related web pages might lead visitors to make a purchase more than Informational and Administrative web pages, which makes sense.
 
-Modeling 
+### Modeling 
 
 D.1: Model Selection with 10-fold cross validation on original dataset. 
 In the first step of our model framework, we fit several models using 11 of the 17 variables in our dataset. We exclude highly collinear variables, such as “Administrative Duration,” which captures similar information to the variable Administrative. (See Table , Appendix). We also dropped variables that likely supply no information for predicting a visitor’s purchasing intention, such as operating machine. 
