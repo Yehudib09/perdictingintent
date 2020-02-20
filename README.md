@@ -31,7 +31,7 @@ Final Report
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The box plot above shows the average time spent on product-related pages split by those who made a purchase vs not. Unsurprisingly, we observe that the shoppers who purchased stayed longer on product related pages than those who did not make a purchase. 
 
-![Figure 1]https://lh4.googleusercontent.com/5xslxBCdHLnQUfM02x58g0QXEVZGOXAI0Limo8NUGqxGrH85OU4FB8lynt7NCZ05KEA2MNzvtR0FW5oWagBe-wuDVRIRufHgAkBiiIo "Relationship between Visitor Type and Purchase Decision")
+![Figure 1](https://lh4.googleusercontent.com/5xslxBCdHLnQUfM02x58g0QXEVZGOXAI0Limo8NUGqxGrH85OU4FB8lynt7NCZ05KEA2MNzvtR0FW5oWagBe-wuDVRIRufHgAkBiiIo "Relationship between Visitor Type and Purchase Decision")
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next, we look at purchase penetration for new visitors vs. returning visitors. The plot above demonstrates that the majority of the visitors coming to the website are returning visitors. Surprisingly, we observe that the rate of purchase is higher for new visitors. 
 
@@ -71,7 +71,7 @@ D. 2: Model Evaluation
 
 Table 3: Test Results
 
-![Table 3]https://lh5.googleusercontent.com/dPaR98pqb7q0B0bCzaGD5ywLCAgBko_UvKxjH-rJgHgZV8-Cy8posLo3vrehqW3I-oA-ujdGtwXmYrtOs2MnGJfJwqRaKeUnPHIoAqW1DCsovC7FuEHo-A2_tsbNhItZyViuhzc "Out of Sample Performance Metrics")
+![Table 3](https://lh5.googleusercontent.com/dPaR98pqb7q0B0bCzaGD5ywLCAgBko_UvKxjH-rJgHgZV8-Cy8posLo3vrehqW3I-oA-ujdGtwXmYrtOs2MnGJfJwqRaKeUnPHIoAqW1DCsovC7FuEHo-A2_tsbNhItZyViuhzc "Out of Sample Performance Metrics")
 
 
 D.4: Oversampling and undersampling to mitigate class imbalance 
@@ -84,11 +84,11 @@ D.4: Oversampling and undersampling to mitigate class imbalance
 
 Table 4: Test Results with Undersampling		
 
-![Table 4]https://lh5.googleusercontent.com/dPaR98pqb7q0B0bCzaGD5ywLCAgBko_UvKxjH-rJgHgZV8-Cy8posLo3vrehqW3I-oA-ujdGtwXmYrtOs2MnGJfJwqRaKeUnPHIoAqW1DCsovC7FuEHo-A2_tsbNhItZyViuhzc "Undersampling")
+![Table 4](https://lh5.googleusercontent.com/dPaR98pqb7q0B0bCzaGD5ywLCAgBko_UvKxjH-rJgHgZV8-Cy8posLo3vrehqW3I-oA-ujdGtwXmYrtOs2MnGJfJwqRaKeUnPHIoAqW1DCsovC7FuEHo-A2_tsbNhItZyViuhzc "Undersampling")
 
 Table 5: Test Results with Oversampling
 
-![Table 5]https://lh4.googleusercontent.com/eHNhnaoGyLgnVAtE7qIZbHMhs_YZ4-lNFlRTt7A6RTdS87zRpy1et9k8W1E1ew_5Tk60KTqVbL6uLbhmHfi-e0Zn621IrbokhFVA_a52N6X0ncbMHDnbYS89kBXDEE5RXw1zHuA "Oversampling")
+![Table 5](https://lh4.googleusercontent.com/eHNhnaoGyLgnVAtE7qIZbHMhs_YZ4-lNFlRTt7A6RTdS87zRpy1et9k8W1E1ew_5Tk60KTqVbL6uLbhmHfi-e0Zn621IrbokhFVA_a52N6X0ncbMHDnbYS89kBXDEE5RXw1zHuA "Oversampling")
 
 D.5: Feature Selection
 
@@ -98,7 +98,7 @@ D.5: Feature Selection
 
 Table 6: Feature Selection 
 
-![Table 6]https://lh6.googleusercontent.com/TmAY8Q9l1O9R8wbEFfvws_qPBtxX-gEprxQDJJntunsofJu7dISpZ0RRh52WIgG34NiotMpOHvwzhHEnvtPo1Ts5UYAle61J0vIidTc "Feature Selection")
+![Table 6](https://lh6.googleusercontent.com/TmAY8Q9l1O9R8wbEFfvws_qPBtxX-gEprxQDJJntunsofJu7dISpZ0RRh52WIgG34NiotMpOHvwzhHEnvtPo1Ts5UYAle61J0vIidTc "Feature Selection")
 
 Final Model 
 
@@ -106,7 +106,7 @@ Final Model
 
 Figure 3: Final Classification Tree
 
-![Figure 3]https://lh4.googleusercontent.com/hzVwb_jDkhTVsClK5Vu0frNJ7aspxbdVymsI9gn1-RdjMX5trPdKFsaDlRwCKj1y5eT_dk40ENIXZb7nULykXXg33TKjHNHPsueP2dE "Classification Tree")
+![Figure 3](https://lh4.googleusercontent.com/hzVwb_jDkhTVsClK5Vu0frNJ7aspxbdVymsI9gn1-RdjMX5trPdKFsaDlRwCKj1y5eT_dk40ENIXZb7nULykXXg33TKjHNHPsueP2dE "Classification Tree")
 
 Deployment 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our model has real world implications for online retailers. As Peretz mentions, discerning intent “should be central to the process of building a website, and particularly its conversion funnel.” In the age of hyper customization, retailers should factor purchase intent into how customers are served online. For customers who are inclined to buy in a visit, it is “important to structure the website in a way that facilitates [the] end goal seamlessly and intuitively.” This means that the user experience should be constructed in a way that minimizes friction and distractions, maximizing the likelihood of conversion. For visitors with no purchase intent, content tailored to optimize other metrics should be offered. 
